@@ -1,4 +1,4 @@
-/* styles.css */
+/* Global Styles */
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -28,7 +28,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 0.5em; /* Decreased margin */
+    margin: 0 0.5em;
 }
 
 nav ul li a {
@@ -42,8 +42,8 @@ nav ul li a:hover {
 }
 
 main {
-    padding-top: 5em; /* Adjusted top padding */
-    max-width: 800px; /* Set maximum width for content */
+    padding-top: 5em;
+    max-width: 800px;
     margin: auto;
 }
 
@@ -107,13 +107,6 @@ footer {
 
 /* Media Queries for Responsive Design */
 
-/* Tablet */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-    main {
-        padding: 4em 1em 1em;
-    }
-}
-
 /* Mobile */
 @media only screen and (max-width: 767px) {
     main {
@@ -129,5 +122,39 @@ footer {
     section#certifications,
     section#languages {
         text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 0.5em 0;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    main {
+        padding: 4em 1em 1em;
+    }
+    nav ul {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    nav ul li {
+        margin: 0 1em;
+    }
+}
+
+/* Laptop */
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+    main {
+        padding: 5em 2em 1em;
+    }
+    nav ul {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    nav ul li {
+        margin: 0 2em;
     }
 }
