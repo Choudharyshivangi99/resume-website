@@ -1,5 +1,4 @@
-/* Global Styles */
-
+/* styles.css */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -13,7 +12,7 @@ header {
     color: white;
     padding: 1em 0;
     text-align: center;
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -28,7 +27,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 0.5em;
+    margin: 0 0.5em; /Decreased margin/
 }
 
 nav ul li a {
@@ -42,7 +41,7 @@ nav ul li a:hover {
 }
 
 main {
-    padding-top: 5em;
+    padding: 6em 1em 1em; /Increased top padding/
     max-width: 800px;
     margin: auto;
 }
@@ -102,74 +101,5 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    font-size: 0.9em;
-}
-
-/* Media Queries for Responsive Design */
-
-/* Mobile */
-@media only screen and (max-width: 767px) {
-    main {
-        padding: 3em 1em 1em;
-    }
-    section#home h1 {
-        font-size: 2em;
-    }
-    section#home h2 {
-        font-size: 1.2em;
-    }
-    section#summary,
-    section#certifications,
-    section#languages {
-        text-align: center;
-    }
-    nav ul {
-        flex-direction: column;
-    }
-    nav ul li {
-        margin: 0.5em 0;
-    }
-}
-
-/* Tablet */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-    main {
-        padding: 4em 1em 1em;
-    }
-    nav ul {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    nav ul li {
-        margin: 0 1em;
-    }
-}
-
-/* Laptop */
-@media only screen and (min-width: 1025px) and (max-width: 1280px) {
-    main {
-        padding: 5em 2em 1em;
-    }
-    nav ul {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    nav ul li {
-        margin: 0 2em;
-    }
-}
-
-/* Additional Styles for Sticky Navigation */
-:target {
-  display: block;
-  position: relative;
-  top: -90px; /* adjust the offset value according to your navigation bar height */
-  visibility: hidden;
-}
-
-.fixed {
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: 999;
+    font-size: 0.9em;
 }
