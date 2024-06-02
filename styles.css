@@ -57,30 +57,8 @@ main {
 /* Mobile */
 @media only screen and (max-width: 767px) {
     main {
-        padding: 3em 1em 4em; /* Adjusted padding to accommodate footer */
-        margin-bottom: 2em;
-    }
-    section#home h1 {
-        font-size: 1.8em;
-    }
-    section#home h2 {
-        font-size: 1.2em;
-    }
-    section#summary,
-    section#certifications,
-    section#languages {
-        text-align: center;
-    }
-    nav ul {
-        flex-direction: column;
-    }
-    nav ul li {
-        margin: 0.5em 0;
-        flex-basis: 100%;
-    }
-    footer {
-        position: static; /* Changed from fixed to static */
-        width: 100%;
-        font-size: 0.9em;
+        padding-top: 7em; /* Increase padding top to make space for fixed header */
+        padding-bottom: 3em; /* Add padding bottom to avoid footer overlap */
+        max-width: 100%; /* Adjusted to ensure content fits within screen width */
     }
 }
