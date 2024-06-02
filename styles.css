@@ -116,6 +116,7 @@ footer {
 @media only screen and (max-width: 767px) {
     main {
         padding: 3em 1em 1em;
+        margin-bottom: 2em; /* added */
     }
     section#home h1 {
         font-size: 1.8em;
@@ -136,7 +137,10 @@ footer {
         flex-basis: 100%; /* updated */
     }
     footer {
-        position: static; /* updated */
+        position: fixed; /* updated */
+        bottom: 0;
+        width: 100%;
+        font-size: 0.9em;
     }
 }
 
