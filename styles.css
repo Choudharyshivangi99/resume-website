@@ -42,15 +42,15 @@ nav ul li a:hover {
 }
 
 main {
-    padding: 6em 1em 1em; /* Increased top padding */
+    padding-top: 5em; /* Adjusted top padding */
     max-width: 800px; /* Set maximum width for content */
     margin: auto;
 }
 
 section {
     margin: 2em 0;
-    padding: 1em; /* Added padding */
-    background-color: #f9f9f9; /* Added background color */
+    padding: 1em;
+    background-color: #f9f9f9;
 }
 
 section#home {
@@ -126,5 +126,3 @@ footer {
         font-size: 1.2em;
     }
 }
-
-
