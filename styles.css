@@ -1,4 +1,5 @@
-/* styles.css */
+/* Global Styles */
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -12,7 +13,7 @@ header {
     color: white;
     padding: 1em 0;
     text-align: center;
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -24,10 +25,12 @@ nav ul {
     display: flex;
     justify-content: center;
     margin: 0;
+    flex-wrap: wrap; /* added */
 }
 
 nav ul li {
-    margin: 0 0.5em; /Decreased margin/
+    margin: 0 0.5em;
+    flex-basis: 20%; /* added */
 }
 
 nav ul li a {
@@ -41,15 +44,17 @@ nav ul li a:hover {
 }
 
 main {
-    padding: 6em 1em 1em; /Increased top padding/
+    padding-top: 5em;
     max-width: 800px;
     margin: auto;
+    padding: 2em; /* updated */
 }
 
 section {
     margin: 2em 0;
     padding: 1em;
     background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* added */
 }
 
 section#home {
@@ -72,6 +77,7 @@ section h2 {
     border-bottom: 2px solid #4CAF50;
     padding-bottom: 0.5em;
     margin-bottom: 1em;
+    font-size: 1.2em; /* updated */
 }
 
 section ul {
@@ -98,8 +104,58 @@ footer {
     color: white;
     text-align: center;
     padding: 1em 0;
-    position: fixed;
+    position: relative; /* updated */
     bottom: 0;
     width: 100%;
-    font-size: 0.9em;
+    font-size: 0.9em;
 }
+
+/* Media Queries for Responsive Design */
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+    main {
+        padding: 3em 1em 1em;
+    }
+    section#home h1 {
+        font-size: 1.8em;
+    }
+    section#home h2 {
+        font-size: 1.2em;
+    }
+    section#summary,
+    section#certifications,
+    section#languages {
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 0.5em 0;
+        flex-basis: 100%; /* updated */
+    }
+    footer {
+        position: static; /* updated */
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    main {
+        padding: 4em 1em 1em;
+    }
+    nav ul {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    nav ul li {
+        margin: 0 1em;
+    }
+}
+
+/* Laptop */
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+    main {
+        padding: 5em 2em 1em;
+    }}
