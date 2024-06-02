@@ -1,4 +1,5 @@
 /* styles.css */
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -12,7 +13,7 @@ header {
     color: white;
     padding: 1em 0;
     text-align: center;
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -27,7 +28,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 0.5em;
+    margin: 0 0.5em; /* Decreased margin */
 }
 
 nav ul li a {
@@ -41,15 +42,15 @@ nav ul li a:hover {
 }
 
 main {
-    padding: 6em 1em 1em;
-    max-width: 800px;
+    padding: 6em 1em 1em; /* Increased top padding */
+    max-width: 800px; /* Set maximum width for content */
     margin: auto;
 }
 
 section {
     margin: 2em 0;
-    padding: 1em;
-    background-color: #f9f9f9;
+    padding: 1em; /* Added padding */
+    background-color: #f9f9f9; /* Added background color */
 }
 
 section#home {
@@ -103,3 +104,27 @@ footer {
     width: 100%;
     font-size: 0.9em;
 }
+
+/* Media Queries for Responsive Design */
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    main {
+        padding: 4em 1em 1em;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+    main {
+        padding: 3em 1em 1em;
+    }
+    section#home h1 {
+        font-size: 2em;
+    }
+    section#home h2 {
+        font-size: 1.2em;
+    }
+}
+
+
