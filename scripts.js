@@ -1,5 +1,3 @@
-// scripts.js
-
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('nav ul li a');
 
@@ -15,10 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    var stickyOffset = document.querySelector('.masthead').offsetTop;
+    var stickyOffset = document.querySelector('header').offsetTop;
 
     window.addEventListener('scroll', function() {
-        var sticky = document.querySelector('.masthead'),
+        var sticky = document.querySelector('header'),
             scroll = window.pageYOffset || document.documentElement.scrollTop;
 
         if (scroll >= stickyOffset) {
