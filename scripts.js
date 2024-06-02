@@ -1,4 +1,5 @@
 // scripts.js
+
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('nav ul li a');
 
@@ -12,5 +13,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 behavior: 'smooth'
             });
         });
+    });
+
+    var stickyOffset = document.querySelector('.masthead').offsetTop;
+
+    window.addEventListener('scroll', function() {
+        var sticky = document.querySelector('.masthead'),
+            scroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scroll >= stickyOffset) {
+            sticky.classList.add('fixed');
+        } else {
+            sticky.classList.remove('fixed');
+        }
     });
 });
